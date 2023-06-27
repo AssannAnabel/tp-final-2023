@@ -19,7 +19,7 @@ function Registro(){
         e.preventDefault()
 
         let newUser={
-            name:e.target.nombre.value,
+            name:e.target.nombre.value,// trabajar con el Email
             password:e.target.password.value,
         }
             addOneUser(newUser)

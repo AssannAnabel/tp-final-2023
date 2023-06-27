@@ -1,8 +1,9 @@
-import Header from './Header'
+
 import {useEffect,useRef,useState} from 'react';
 
 
-function Login(){
+function Login(props){
+    console.log("texto",props)
     const inicialUrl='https://647dd4d6af984710854a6fcc.mockapi.io/user-card'
     const [user,setUser]=useState([]);
     const fetchUser=async (url)=>{
@@ -28,9 +29,9 @@ function Login(){
         }
         let userFound= user.find(user=>user.name===loginUser.name)/* esto conviene hacerlo con id*/ 
         if(userFound.password===loginUser.password){
-            notificacionRef.current.style.color='green';
-            notificacionRef.current.innerHTML='Usuario Logueado';
-
+            window.location = '/inicio';
+            
+            
         }
         else{
             notificacionRef.current.style.color='red';
@@ -41,7 +42,7 @@ function Login(){
    
     return(
         <>
-        <Header/>
+       
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
             <label htmlFor='nombre'>Nombre</label>

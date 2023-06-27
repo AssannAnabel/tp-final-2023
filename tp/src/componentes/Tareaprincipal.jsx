@@ -1,5 +1,5 @@
 import {Router,Route} from 'react-router-dom';
-import logoAct from './imagenes/logoAct.png';
+//import logoAct from './imagenes/logoAct.png';
 import ListaDeTareas from './componentes/ListaDeTareas';
 
 
@@ -11,8 +11,8 @@ function Tareaprincipal() {
   
     <div className='aplicacion-tareas'>
       <div className='app-logo-contenedor'>
-        <img src={logoAct}
-        className='app-logo' />
+        {/* <img src={logoAct}
+        className='app-logo' /> */}
         </div>
         <div className='tareas-lista-principal'>
           <h1>Titulo que se puede cambiar</h1>

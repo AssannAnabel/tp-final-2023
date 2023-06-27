@@ -24,7 +24,12 @@ body{
     background-color: rgb(184, 184, 178);
 }
 img{
-  border-radius: 50%;
-  width: 200px; /*ancho deseado*/
-  height: auto; /* la altura se ajusta automaticamente*/
+  width: 190px;
+  height: 30px;
+  object-fit: cover;
+  border: 1px solid rgb(31, 19, 1);
+  border-radius: 10px;
+  /* border-radius: 50%;
+  width: 200px; ancho deseado
+  height: auto; la altura se ajusta automaticamente */
 }
