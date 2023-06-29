@@ -1,8 +1,9 @@
-import React,{useState} from "react";
+import React,{useState} from 'react';
+import '../estilos/Tareainput.css';
 import{v4 as uuidv4} from 'uuid'; /*Importamos el paquete uuid para usar un id unico para las tarjetas */
 
 
-function TareaInput(props){
+function Tareainput(props){
     const [input, setInput] = useState(''); /*cadena de texto vacia, ya que inicialmente el usuario no puso ningun valor*/
     const manejarCambio = e =>{//mientras el usuario escribe en tiempo real
         setInput(e.target.value);
@@ -20,6 +21,7 @@ function TareaInput(props){
         }
         //console.log(tareaNueva);// se ve el objeto con sus propiedaddes
         props.onSubmit(tareaNueva);
+        e.target.reset()
 
     };
     return(
@@ -32,8 +34,8 @@ function TareaInput(props){
                 name='texto'
                 onChange={manejarCambio}
             />
-            <button className='tarea-boton'>Agregar Tarea</button>
+            <button className='tarea-boton'>Agregar</button>
         </form>
     )
 }
-export default TareaInput;
+export default Tareainput;

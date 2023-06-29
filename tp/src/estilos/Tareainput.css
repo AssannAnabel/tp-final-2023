@@ -1,0 +1,33 @@
+/* Estrucrura principal*/
+.tarea-inputs{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+/*campo de texto*/
+.tarea-input{
+    width: 350px;
+    font-size: 18px;
+    background-color: white;
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid #3b3c61;
+    outline:none;
+}
+
+/*Boton Agregar Tarea*/
+.tarea-boton{
+    padding: 16px;
+    font-size: 18px;
+    font-family: roboto,sans-serif;
+    border:#c57805 solid;
+    border-radius:0 4px 4px 0;
+    cursor:pointer;
+    outline: none;
+    background-color:#1b1b32;
+    color:#fff;
+    text-transform: capitalize;/*En cada palabra pone la primera letra en mayuscula*/
+}
+ 

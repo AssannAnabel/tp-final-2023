@@ -1,7 +1,8 @@
 import React from 'react';
+import '../estilos/Tarea.css'
 import {AiOutlineCloseSquare} from "react-icons/ai"; /* entre las llaves poner el nombre del icono que buscamos*/
 
-function Tarea({id,texto, completada,completarTarea,eliminarTarea}){ //props tru/false si es tru se le asigna tarea-contenedor completa sino tarea-contenedor
+function Tarea({id,texto, completada,completarTarea,eliminarTarea}){ //props true/false si es true se le asigna tarea-contenedor completa sino tarea-contenedor
     return(
         <div className={completada ? 'tarea-contenedor completada':'tarea-contenedor'}>
             <div

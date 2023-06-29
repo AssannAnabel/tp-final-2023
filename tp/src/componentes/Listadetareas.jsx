@@ -1,8 +1,9 @@
 import React,{useState} from "react";
-import TareaInput from "./Tareainput";
+import '../estilos/listadetareas.css';
 import Tarea from "./Tarea";
+import Tareainput from './Tareainput'
 
-function ListaDeTareas(){
+function Listadetareas(){
 
     const[tareas,setTareas]= useState([]); /*Inicialmente tarea es un arreglo vacio, y se va a ir agregando cada tarea*/
 
@@ -31,7 +32,7 @@ function ListaDeTareas(){
 
     return(
     <>
-    <TareaInput onSubmit={agregarTarea} />
+    <Tareainput onSubmit={agregarTarea} />
     <div className='tareas-lista-contenedor'>
         {
             tareas.map((tarea) =>// un componente por cada arreglo de tarea
@@ -51,4 +52,4 @@ function ListaDeTareas(){
 
     );
 }
-export default ListaDeTareas;
+export default Listadetareas;

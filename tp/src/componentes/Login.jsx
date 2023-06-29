@@ -24,20 +24,23 @@ function Login(props){
         e.preventDefault()
 
         let loginUser={
-            name:e.target.nombre.value,
+            email:e.target.email.value,
             password:e.target.password.value,
         }
-        let userFound= user.find(user=>user.name===loginUser.name)/* esto conviene hacerlo con id*/ 
-        if(userFound.password===loginUser.password){
+        let userFound= user.find(user=>user.email===loginUser.email)
+       
+        if (userFound && userFound.password === loginUser.password) {
             window.location = '/inicio';
-            
-            
-        }
-        else{
-            notificacionRef.current.style.color='red';
-            notificacionRef.current.innerHTML='Usuario Incorrecto';
-            }
+          } else {
+            notificacionRef.current.style.color = 'red';
+            notificacionRef.current.innerHTML = 'Usuario o contraseña incorrectos';
+          }
             e.target.reset()// para limpiar
+        }
+        function handleSubmitRegis(e){
+            e.preventDefault()
+
+          window.location="/registro";
         }
    
     return(
@@ -45,8 +48,8 @@ function Login(props){
        
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
-            <label htmlFor='nombre'>Nombre</label>
-            <input type='text' name='nombre' id='nombre'/>
+            <label htmlFor='email'>Email</label>
+            <input type='text' name='email' id='email'/>
 
             <label htmlFor='password'>Contraseña</label>
             <input type='password' name='password' id='password'/>
@@ -55,6 +58,12 @@ function Login(props){
             <button type='submit'>Iniciar Sesion </button>
            
         </form>
+        <form onSubmit={handleSubmitRegis}>
+        <button type='submit' >Registrarme </button>
+
+
+        </form>
+        
         
         </>
     )

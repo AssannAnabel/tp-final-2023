@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(180, 175, 170);
+    background-color: rgb(235, 190, 146);
 }
 .navUl{
     display: flex;
@@ -11,7 +11,7 @@ body{
   .navUl li{
     list-style: none;
     background: rgb(180, 160, 104);
-    border: 1px solid black;
+    border: 3px solid #1F064899;
     border-radius: 5px;
     padding: 4px;
   }
@@ -24,12 +24,19 @@ body{
     background-color: rgb(184, 184, 178);
 }
 img{
-  width: 190px;
-  height: 30px;
+  width: 200px;
+  height: 40px;
   object-fit: cover;
-  border: 1px solid rgb(31, 19, 1);
+  border: 3px solid  #08080899;
   border-radius: 10px;
   /* border-radius: 50%;
   width: 200px; ancho deseado
   height: auto; la altura se ajusta automaticamente */
+}
+#buscar{
+  border: 3px solid  #1F064899;
+}
+.registrarme{
+  border: 3px solid  #08080899;
+  background-color:#af9d62;
 }
