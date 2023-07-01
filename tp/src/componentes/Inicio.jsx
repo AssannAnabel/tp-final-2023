@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Header from './Header';
 import Tareaprincipal from './Tareaprincipal';
+import { UserContext } from './UserContext';
 
+function Inicio() {
+  const userContext = useContext(UserContext);
+  const { isLoggedIn, loggedInUser } = userContext;
 
-function Inicio({ isLoggedIn, loggedInUser }) {
-  
   return (
     <>
       <Header />
       {isLoggedIn ? (
         <>
-          <p>Bienvenido: {loggedInUser}</p>
+          <h3>Bienvenido: {loggedInUser}</h3>
           <Tareaprincipal />
           <Tareaprincipal />
           <Tareaprincipal />
@@ -22,3 +24,6 @@ function Inicio({ isLoggedIn, loggedInUser }) {
 }
 
 export default Inicio;
+
+
+

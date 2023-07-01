@@ -1,13 +1,14 @@
-import Imagen from './Imagen';
-import { useEffect, useRef, useState } from 'react';
-import Inicio from '../componentes/Inicio';
+import React, { useContext, useEffect, useRef } from 'react';
+import { UserContext } from './UserContext';
+import Inicio from './Inicio';
 
 function Login() {
+  const { user, setUser, isLoggedIn, setIsLoggedIn, loggedInUser, setLoggedInUser } = useContext(UserContext);
+
 
   const inicialUrl = 'https://647dd4d6af984710854a6fcc.mockapi.io/user-card';
-  const [user, setUser] = useState([]);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [loggedInUser, setLoggedInUser] = useState('');
+  const notificacionRef = useRef(null);
+
   const fetchUser = async (url) => {
     try {
       const response = await fetch(url);
@@ -22,8 +23,6 @@ function Login() {
     fetchUser(inicialUrl);
   }, []);
 
-  const notificacionRef = useRef(null);
-
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -37,8 +36,6 @@ function Login() {
     if (userFound && userFound.password === loginUser.password) {
       setIsLoggedIn(true);
       setLoggedInUser(userFound.name);
-      
-      
     } else {
       notificacionRef.current.style.color = 'red';
       notificacionRef.current.innerHTML = 'Usuario o contraseña incorrectos';
@@ -76,16 +73,11 @@ function Login() {
         </>
       ) : (
         <>
-             
-           <p>Bienvenido, {loggedInUser} </p> 
-           {window.location='/inicio'}
-           <Inicio isLoggedIn={isLoggedIn} loggedInUser={loggedInUser} />
           
+        
+          <Inicio />
         </>
-      )
-     
-      }
-
+      )}
     </>
   );
 }
