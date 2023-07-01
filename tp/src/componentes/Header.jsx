@@ -1,4 +1,7 @@
 import {Link} from 'react-router-dom';
+import '../estilos/Header.css';
+
+
 
 function Header(){
     return(
@@ -7,9 +10,7 @@ function Header(){
             <nav>
                 <ul className='navUl'>
                 
-                    {/* <li><Link to='/registro'>Registro</Link></li>
-                    <li><Link to='/login'>Login</Link></li>
-                    <li><Link to='/inicio'>Inicio</Link></li> */}
+                    <li><Link to='/inicio'>Inicio</Link></li> 
                     <li><Link to= '/nosotros'>Nosotros</Link></li>
                     <li><Link to='/contacto'>Contacto</Link></li>
                     <input id="buscar" type="text" placeholder='buscar...'/> 

@@ -1,4 +1,4 @@
-/* Estrucrura principal*/
+/*Estrucrura principal*/
 .tarea-inputs{
     display:flex;
     flex-wrap: wrap;
@@ -28,6 +28,5 @@
     outline: none;
     background-color:#1b1b32;
     color:#fff;
-    text-transform: capitalize;/*En cada palabra pone la primera letra en mayuscula*/
+    text-transform: capitalize;/* En cada palabra pone la primera letra en mayuscula*/
 }
- 

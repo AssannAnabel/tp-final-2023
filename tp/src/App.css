@@ -1,42 +1,19 @@
-body{
-    background-color: rgb(235, 190, 146);
-}
-.navUl{
-    display: flex;
-    justify-content: space-evenly;
-    background: rgb(167, 167, 165);
-    padding: 10px;
-  }
-  
-  .navUl li{
-    list-style: none;
-    background: rgb(180, 160, 104);
-    border: 3px solid #1F064899;
-    border-radius: 5px;
-    padding: 4px;
-  }
-  
 
-.contactForm{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(184, 184, 178);
+body{
+  background-color: rgb(132, 101, 8)
 }
-img{
-  width: 200px;
-  height: 40px;
-  object-fit: cover;
-  border: 3px solid  #08080899;
-  border-radius: 10px;
-  /* border-radius: 50%;
-  width: 200px; ancho deseado
-  height: auto; la altura se ajusta automaticamente */
+
+.div-img{
+  text-align: center;
 }
-#buscar{
-  border: 3px solid  #1F064899;
-}
-.registrarme{
-  border: 3px solid  #08080899;
-  background-color:#af9d62;
+
+
+h2{
+color:#0F0F0F;
+text-align: center;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 48px;
+font-weight: 900;
+line-height: 48px;
+letter-spacing: 0.5em;
 }

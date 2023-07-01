@@ -1,3 +1,6 @@
+import '../estilos/Header.css';
+import Imagen from './Imagen';
+
 
 function Registro(){    
     function addOneUser(user){
@@ -10,7 +13,6 @@ function Registro(){
         .then((res)=>res.json())
         .then(data=>console.log(data))
         .then(data => {
-            // La respuesta del servidor contiene los datos guardados, puedes redirigir a la siguiente ruta
             window.location.href = '/';
           })
 
@@ -32,8 +34,10 @@ function Registro(){
     }
     return(
         <>
-        
+      <div className='div-registro'> 
     <h2>Registrar Usuario</h2>
+    <Imagen/>
+    <div>
     <form onSubmit={handleSubmit}>
         <label htmlFor='nombre'>Nombre</label>
         <input type='text' name='nombre' id='nombre'/>
@@ -49,7 +53,8 @@ function Registro(){
         
         <button type='submit'>Registrarme</button>
     </form>
-   
+    </div> 
+    </div>
         </>
         
     )

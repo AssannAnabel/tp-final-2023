@@ -1,25 +1,25 @@
  .tarea-contenedor{
-    width: 500px;
+    width: 300px;
     min-height: 65px;
     background-color: rgb(123, 123, 241);
     margin: 5px 0;
-    padding:8px 15px 8px 20px;
+    padding:4px 8px 6px 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 7px;
-    border: 1px solid white;
+    border: 1px solid rgb(7, 7, 7);
     cursor:pointer; /*cambiar el cursor por una manito*/
 }
 /*colores, degrade cada 3 elementos cambia el color*/
 .tarea-contenedor:nth-child(3n + 1){
-    background-color:#1b1b32 ;
+    background-color:#2d0c6d ;
 }
 .tarea-contenedor:nth-child(3n + 2){
-    background-color: #2a2a40;
+    background-color:  #3b13a2;
 }
 .tarea-contenedor:nth-child(3n + 3){
-    background-color: #3b3b4f;
+    background-color:#492AD6;
 }
 
 .tarea-texto{
@@ -28,7 +28,7 @@
     font-size: 20px;
     display:flex;
     align-items: center;
-     overflow-wrap: anywhere; /*si el texto de la tarea es muy largo se corta y sigue hacia abajo, por eso se asigna una altura minima*/
+    overflow-wrap: anywhere; /*si el texto de la tarea es muy largo se corta y sigue hacia abajo, por eso se asigna una altura minima*/
 
 } 
 .tarea-icono{
@@ -41,6 +41,6 @@
 
 /*Tarea completada*/
 .tarea-contenedor.completada{
-    background-color: rgb(16, 1, 31);
+    background-color: rgba(224, 89, 10, 0.822);
     text-decoration: line-through;/*texto tachado*/
 } 

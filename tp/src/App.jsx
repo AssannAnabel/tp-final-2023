@@ -12,8 +12,9 @@ import Nosotros from './componentes/Nosotros'
 function App(){
     return(
         <>
+        
         <Routes>
-        <Route exact path='/' element ={<Login name="pepe"/>} />
+        <Route exact path='/' element ={<Login />} />
         <Route exact path='/registro' element ={<Registro/>} />
         <Route exact path='/inicio' element={<Inicio/>}/>
         <Route exact path='/contacto' element ={<Contacto/>} />

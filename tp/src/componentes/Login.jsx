@@ -1,8 +1,9 @@
-
+import Imagen from './Imagen';
 import {useEffect,useRef,useState} from 'react';
 
-
+import '../estilos/Login.css';
 function Login(props){
+
     console.log("texto",props)
     const inicialUrl='https://647dd4d6af984710854a6fcc.mockapi.io/user-card'
     const [user,setUser]=useState([]);
@@ -24,14 +25,18 @@ function Login(props){
         e.preventDefault()
 
         let loginUser={
+            
             email:e.target.email.value,
             password:e.target.password.value,
         }
         let userFound= user.find(user=>user.email===loginUser.email)
        
         if (userFound && userFound.password === loginUser.password) {
+       
             window.location = '/inicio';
-          } else {
+            
+          } 
+          else {
             notificacionRef.current.style.color = 'red';
             notificacionRef.current.innerHTML = 'Usuario o contraseña incorrectos';
           }
@@ -47,15 +52,19 @@ function Login(props){
         <>
        
         <h2>Login</h2>
+        <Imagen/>
+        <div className='div-form'>
         <form onSubmit={handleSubmit}>
-            <label htmlFor='email'>Email</label>
+
+            <label htmlFor='email'>Email: </label>
             <input type='text' name='email' id='email'/>
 
-            <label htmlFor='password'>Contraseña</label>
+            <label htmlFor='password'>Contraseña: </label>
             <input type='password' name='password' id='password'/>
 
             <p id='notificacion' ref={notificacionRef}></p>
             <button type='submit'>Iniciar Sesion </button>
+           
            
         </form>
         <form onSubmit={handleSubmitRegis}>
@@ -64,7 +73,7 @@ function Login(props){
 
         </form>
         
-        
+        </div>
         </>
     )
 }

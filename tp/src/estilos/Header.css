@@ -1,0 +1,34 @@
+.navUl{
+    display: flex;
+    justify-content: space-evenly;
+    background: rgb(167, 167, 165);
+    padding: 10px;
+    list-style:none,
+    
+  }
+  
+  .navUl li{
+    list-style: none;
+    background: rgb(180, 160, 104);
+    border: 3px solid #1F064899;
+    border-radius: 5px;
+    padding: 4px;
+  }
+  
+
+.contactForm{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(175, 139, 19);
+}
+img{
+  width: 200px;
+  height: 40px;
+  object-fit: cover;
+  border: 3px solid  #08080899;
+  border-radius: 10px;
+  /* border-radius: 50%;
+  width: 200px; ancho deseado
+  height: auto; la altura se ajusta automaticamente */
+}
