@@ -2,15 +2,21 @@ import React from 'react';
 import Header from './Header';
 import Tareaprincipal from './Tareaprincipal';
 
-function Inicio() {
+
+function Inicio({ isLoggedIn, loggedInUser }) {
+  
   return (
     <>
       <Header />
-      <h2>Bienvenido/a!</h2>
-      <Tareaprincipal />
-      <Tareaprincipal />
-      <Tareaprincipal />
-      <Tareaprincipal />
+      {isLoggedIn ? (
+        <>
+          <p>Bienvenido: {loggedInUser}</p>
+          <Tareaprincipal />
+          <Tareaprincipal />
+          <Tareaprincipal />
+          <Tareaprincipal />
+        </>
+      ) : null}
     </>
   );
 }

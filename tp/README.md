@@ -2,7 +2,7 @@ ACTIVITY CARD
 Fabricio Cordoba, Santiago Garda, Anabel Assann
 
 Presentación:
-¡Bienvenidos a nuestro  proyecto de tarjetas de tareas con React! En este proyecto, hemos creado una aplicación intuitiva y fácil de usar que te permite organizar tus tareas diarias de manera eficiente y recordar tus actividades diarias.
+¡Bienvenidos a nuestro  proyecto de tarjetas de tareas con React! En este proyecto, hemos creado una aplicación intuitiva y fácil de usar que te permite organizar tus tareas de manera eficiente y recordar tus actividades diarias.
 Nuestras tarjetas de tareas te ayudarán a mantener todo en orden.
 Para acceder el usuario deberá registrarse con su email y una contraseña.
 Una vez registrado ingresará a la página principal donde aparecerá su nombre de registro, podrá ver información, completar formulario y lo principal empezar a interactuar con sus tarjetas de tareas.
