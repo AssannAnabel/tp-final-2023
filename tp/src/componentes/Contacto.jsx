@@ -1,4 +1,5 @@
-import Header from "./Header";
+import Header from './Header';
+import Imagen from './Imagen';
 
 function Contacto(){
     function handleSubmit(e){
@@ -16,6 +17,7 @@ function Contacto(){
     return(
         <>
        <Header/>
+       <Imagen/>
        <h3>Contacto</h3>
        <form onSubmit={handleSubmit} className='contactForm'>
 

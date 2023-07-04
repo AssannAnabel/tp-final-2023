@@ -4,8 +4,8 @@ import Imagen from './Imagen';
 
 function Registro(){    
     function addOneUser(user){
-        const urlBase='https://647dd4d6af984710854a6fcc.mockapi.io/user-card';
-        fetch(urlBase,{
+        const inicialUrl='https://647dd4d6af984710854a6fcc.mockapi.io/user-card';
+        fetch(inicialUrl,{
             method:'POST',
             headers:{'content-type':'application/json'},
             body:JSON.stringify(user),

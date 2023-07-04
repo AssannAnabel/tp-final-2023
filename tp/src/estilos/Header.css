@@ -21,6 +21,7 @@
     flex-direction: column;
     align-items: center;
     background-color: rgb(175, 139, 19);
+    border: 2px solid black;
 }
 img{
   width: 200px;
@@ -28,7 +29,5 @@ img{
   object-fit: cover;
   border: 3px solid  #08080899;
   border-radius: 10px;
-  /* border-radius: 50%;
-  width: 200px; ancho deseado
-  height: auto; la altura se ajusta automaticamente */
+ 
 }

@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import { UserContext } from './UserContext';
 import Inicio from './Inicio';
+import '../estilos/Login.css';
+import Imagen from './Imagen'
 
 function Login() {
   const { user, setUser, isLoggedIn, setIsLoggedIn, loggedInUser, setLoggedInUser } = useContext(UserContext);
@@ -9,16 +11,12 @@ function Login() {
   const inicialUrl = 'https://647dd4d6af984710854a6fcc.mockapi.io/user-card';
   const notificacionRef = useRef(null);
 
-  const fetchUser = async (url) => {
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      setUser(data);
-    } catch (error) {
-      console.log(error);
-    }
+  const fetchUser = (url) => {
+    fetch (url)
+      .then(response =>response.json())
+      .then (data => setUser(data))
+      .catch(error =>console.log(error));
   };
-
   useEffect(() => {
     fetchUser(inicialUrl);
   }, []);
@@ -35,7 +33,8 @@ function Login() {
 
     if (userFound && userFound.password === loginUser.password) {
       setIsLoggedIn(true);
-      setLoggedInUser(userFound.name);
+      setLoggedInUser(userFound);
+      
     } else {
       notificacionRef.current.style.color = 'red';
       notificacionRef.current.innerHTML = 'Usuario o contraseña incorrectos';
@@ -46,22 +45,23 @@ function Login() {
 
   function handleSubmitRegis(e) {
     e.preventDefault();
-
     window.location = '/registro';
+    
   }
 
   return (
     <>
+    <Imagen/>
       {!isLoggedIn ? (
         <>
           <h2>Login</h2>
 
           <form onSubmit={handleSubmit}>
             <label htmlFor="email">Email: </label>
-            <input type="text" name="email" id="email" />
+            <input type="text" name="email" id="email" placeholder='Ingrese su mail'/>
 
             <label htmlFor="password">Contraseña: </label>
-            <input type="password" name="password" id="password" />
+            <input type="password" name="password" id="password" placeholder='Ingrese su contraseña'/>
 
             <p id="notificacion" ref={notificacionRef}></p>
             <button type="submit">Iniciar Sesion</button>
@@ -73,9 +73,10 @@ function Login() {
         </>
       ) : (
         <>
-          
+          <h3>Bienvenido!{loggedInUser.name}</h3>
+         
         
-          <Inicio />
+          <Inicio /> {/*redirecciona mensaje a la ruta indicada */}
         </>
       )}
     </>

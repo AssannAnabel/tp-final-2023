@@ -1,0 +1,8 @@
+.container-p{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: xx-large;
+    justify-content:space-between ;
+    width:12%;
+}
