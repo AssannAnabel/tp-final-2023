@@ -1,0 +1,15 @@
+.label-contacto{
+    text-align: center;
+}
+
+.select-contacto{
+    height: 30px;
+    }
+
+    @media(max-width: 768px){
+
+        .btn-enviar{
+            margin-top: 10px;
+            
+        }
+    }

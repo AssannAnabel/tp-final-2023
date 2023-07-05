@@ -1,5 +1,6 @@
 import '../estilos/Header.css';
 import Imagen from './Imagen';
+import '../estilos/Registro.css';
 
 
 function Registro(){    
@@ -51,7 +52,7 @@ function Registro(){
         <label htmlFor='password'>Contraseña</label>
         <input type='password' name='password' id='password'/>
         
-        <button type='submit'>Registrarme</button>
+        <button className='btn-registrarme' type='submit'>Registrarme</button>
     </form>
     </div> 
     </div>

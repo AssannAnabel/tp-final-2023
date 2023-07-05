@@ -7,6 +7,11 @@
     letter-spacing: 0.2em;
     width: 50%;
     line-height: 1.5;
-    border: 2px solid black;
-    background-color: rgb(160, 126, 33);
+    background-color: rgb(196, 196, 175);
+}
+
+@media(max-width: 768px){
+    .div-p-nosotros{
+        width: 80%;
+    }
 }

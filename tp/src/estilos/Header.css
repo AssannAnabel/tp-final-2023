@@ -1,28 +1,25 @@
 .navUl{
-    display: flex;
-    justify-content: space-evenly;
-    background: rgb(167, 167, 165);
-    padding: 10px;
-    list-style:none,
-    
-  }
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  list-style: none;
+  border-bottom: 2px solid rgb(61, 49, 49);
   
-  .navUl li{
-    list-style: none;
-    background: rgb(180, 160, 104);
-    border: 3px solid #1F064899;
-    border-radius: 5px;
-    padding: 4px;
-  }
-  
-
-.contactForm{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(175, 139, 19);
-    border: 2px solid black;
 }
+
+.navUl li{
+  margin: auto;
+  border-radius: 5px;
+  padding: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+.enlace {
+  text-decoration: none;
+}
+
+
 img{
   width: 200px;
   height: 40px;
@@ -30,4 +27,10 @@ img{
   border: 3px solid  #08080899;
   border-radius: 10px;
  
+}
+@media(max-width: 768px){
+  .navUl li {
+    font-size: 20px;
+  }
+  
 }

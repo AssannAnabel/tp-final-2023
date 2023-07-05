@@ -33,6 +33,7 @@ function Tareaprincipal() {
           </form>
         ) : (
           <>
+          
             <h1>{titulo}</h1>
             <button id="editarTitulo" onClick={handleEditarTitulo}>Editar Título</button>
           </>

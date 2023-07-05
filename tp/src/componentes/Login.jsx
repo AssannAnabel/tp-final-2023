@@ -4,7 +4,7 @@ import Inicio from './Inicio';
 import '../estilos/Login.css';
 import Imagen from './Imagen'
 
-function Login() {
+function Login() {//estados
   const { user, setUser, isLoggedIn, setIsLoggedIn, loggedInUser, setLoggedInUser } = useContext(UserContext);
 
 
@@ -21,19 +21,20 @@ function Login() {
     fetchUser(inicialUrl);
   }, []);
 
-  function handleSubmit(e) {
+  function handleSubmit(e) {//lógica del envio de formulario
     e.preventDefault();
 
     let loginUser = {
       email: e.target.email.value,
       password: e.target.password.value,
     };
-
+//lógica validación del usuario
     let userFound = user.find((user) => user.email === loginUser.email);
 
     if (userFound && userFound.password === loginUser.password) {
       setIsLoggedIn(true);
       setLoggedInUser(userFound);
+     
       
     } else {
       notificacionRef.current.style.color = 'red';
@@ -43,7 +44,7 @@ function Login() {
     e.target.reset(); // para limpiar
   }
 
-  function handleSubmitRegis(e) {
+  function handleSubmitRegis(e) {// componente Registro
     e.preventDefault();
     window.location = '/registro';
     
@@ -55,7 +56,7 @@ function Login() {
       {!isLoggedIn ? (
         <>
           <h2>Login</h2>
-
+          <div className='div-form'>
           <form onSubmit={handleSubmit}>
             <label htmlFor="email">Email: </label>
             <input type="text" name="email" id="email" placeholder='Ingrese su mail'/>
@@ -70,13 +71,12 @@ function Login() {
           <form onSubmit={handleSubmitRegis}>
             <button type="submit">Registrarme</button>
           </form>
+          </div>
         </>
       ) : (
         <>
           <h3>Bienvenido!{loggedInUser.name}</h3>
-         
-        
-          <Inicio /> {/*redirecciona mensaje a la ruta indicada */}
+         <Inicio /> {/*redirecciona mensaje a la ruta indicada */}
         </>
       )}
     </>
