@@ -1,6 +1,7 @@
 import '../estilos/Header.css';
-import Imagen from './Imagen';
+import Header from './Header';
 import '../estilos/Registro.css';
+import Footer from './Footer';
 
 
 function Registro(){    
@@ -35,9 +36,10 @@ function Registro(){
     }
     return(
         <>
+        <Header/>
       <div className='div-registro'> 
     <h2>Registrar Usuario</h2>
-    <Imagen/>
+    
     <div>
     <form onSubmit={handleSubmit}>
         <label htmlFor='nombre'>Nombre</label>
@@ -56,6 +58,7 @@ function Registro(){
     </form>
     </div> 
     </div>
+    <Footer/>
         </>
         
     )

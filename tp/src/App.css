@@ -1,19 +1,23 @@
 
 body{
-  background-color: rgb(132, 101, 8)
+  
+  background-color: #F7F9F9;  
+
+
 }
 
+
 .div-img{
-  text-align: center;
+text-align: center;
 }
 
 
 h2{
 color:#0F0F0F;
 text-align: center;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-family: Arial, Helvetica, sans-serif;
 font-size: 48px;
-font-weight: 900;
+font-weight: 700;
 line-height: 48px;
-letter-spacing: 0.5em;
+
 }

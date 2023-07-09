@@ -1,0 +1,53 @@
+.tareas-lista-principal{ 
+    /* background-color: rgb(60, 31, 60); */
+    background-color: #FCF3CF;
+    width: 40%;
+    margin-bottom: 10px;
+    border-radius: 5%;
+    border: solid 2px black
+    }
+    
+    
+    .div-titulo{
+        text-align: center;
+    }
+    
+    .form-titulo{
+       
+        width: 100%;
+    }
+    
+    .input-titulo-editado{
+    width: 200px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0%;
+    
+    
+    }
+    
+    .titulo-tarea{
+    color: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+    
+    
+    @media(max-width: 768px){
+        #editarTitulo{
+            width: 100px;
+            height: 40px;
+        }
+        .btn-cambiar-titulo{
+            width: 100px;
+            height: 40px;
+    
+    }
+    
+    }
+    
+    @media(max-width: 576px){
+        .tareas-lista-principal{
+            width: 100%;
+        }
+    }

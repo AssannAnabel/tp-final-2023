@@ -1,36 +1,54 @@
 .navUl{
   display: flex;
   justify-content: space-evenly;
-  padding: 10px;
   list-style: none;
-  border-bottom: 2px solid rgb(61, 49, 49);
+  background-color: #FCF3CF;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  
+  
   
 }
 
 .navUl li{
   margin: auto;
   border-radius: 5px;
-  padding: 4px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
+  font-weight: 700;
 }
 
 .enlace {
   text-decoration: none;
+  color: black;
+  
 }
+
+.enlace:visited {
+  color: black;
+}
+
+.enlace:hover{
+  text-decoration: underline;
+  
+}
+
+
 
 
 img{
   width: 200px;
   height: 40px;
   object-fit: cover;
-  border: 3px solid  #08080899;
   border-radius: 10px;
  
 }
+
 @media(max-width: 768px){
   .navUl li {
     font-size: 20px;
   }
+ 
   
 }

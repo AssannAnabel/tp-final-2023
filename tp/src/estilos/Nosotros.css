@@ -7,11 +7,23 @@
     letter-spacing: 0.2em;
     width: 50%;
     line-height: 1.5;
-    background-color: rgb(196, 196, 175);
+    background-color: #FCF3CF;
+    border-radius: 10px;
+    padding: 10px;
+    
 }
 
 @media(max-width: 768px){
     .div-p-nosotros{
         width: 80%;
+    }
+}
+
+@media(max-width: 576px){
+    .div-p-nosotros{
+        height: 40%;
+    }
+    p{
+        font-weight: 700;
     }
 }

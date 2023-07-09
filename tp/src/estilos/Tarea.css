@@ -1,46 +1,70 @@
- .tarea-contenedor{
-    width: 300px;
-    min-height: 65px;
-    background-color: rgb(123, 123, 241);
-    margin: 5px 0;
-    padding:4px 8px 6px 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 7px;
-    border: 1px solid rgb(7, 7, 7);
-    cursor:pointer; /*cambiar el cursor por una manito*/
+.tarea-contenedor{
+  width: 80%;
+  min-height: 65px;
+  background-color: rgb(8, 8, 8);
+  margin: 5px 0;
+  padding:4px 8px 6px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px;
+  border: 1px solid rgb(7, 7, 7);
+  cursor:pointer; /*cambiar el cursor por una manito*/
+  
 }
 /*colores, degrade cada 3 elementos cambia el color*/
 .tarea-contenedor:nth-child(3n + 1){
-    background-color:#2d0c6d ;
+  background-color: #F9E79F;
 }
 .tarea-contenedor:nth-child(3n + 2){
-    background-color:  #3b13a2;
+  background-color: #F7DC6F; 
 }
 .tarea-contenedor:nth-child(3n + 3){
-    background-color:#492AD6;
+  background-color: #F4D03F;
+ 
 }
 
 .tarea-texto{
-    width: 100%;
-    height: 100%;
-    font-size: 20px;
-    display:flex;
-    align-items: center;
-    overflow-wrap: anywhere; /*si el texto de la tarea es muy largo se corta y sigue hacia abajo, por eso se asigna una altura minima*/
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  display:flex;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  overflow-wrap:anywhere;
+   /*si el texto de la tarea es muy largo se corta y sigue hacia abajo, por eso se asigna una altura minima*/
 
 } 
 .tarea-icono{
-    width: 25px;
-    height: 25px;
-    margin: 5px;
+  width: 25px;
+  height: 25px;
+  margin: 5px;
 
 }
 
 
 /*Tarea completada*/
 .tarea-contenedor.completada{
-    background-color: rgba(224, 89, 10, 0.822);
-    text-decoration: line-through;/*texto tachado*/
+  background-color: #BFC9CA;
+  text-decoration: line-through;/*texto tachado*/
 } 
+@media(max-width: 768px){
+  .tarea-contenedor{
+
+    width: 80%;
+  }
+}
+
+@media(max-width: 576px){
+  .tarea-contenedor{
+
+    width: 80%;
+  }
+}
+
+
+
+
+
+

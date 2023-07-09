@@ -1,15 +1,31 @@
 .label-contacto{
-    text-align: center;
+  text-align: center;
 }
 
 .select-contacto{
-    height: 30px;
-    }
+  height: 30px;
+  }
+.select-contacto:hover{
+border: solid 2px rgb(169, 118, 15)
+}
 
-    @media(max-width: 768px){
+textarea:hover{
+border: solid 2px rgb(169, 118, 15)
+}
 
-        .btn-enviar{
-            margin-top: 10px;
-            
-        }
-    }
+  .input-contacto{
+    border-radius: 0;
+  }
+
+  .btn-enviar-contacto{
+    margin-top: 10px;
+  }
+
+
+  @media(max-width:768px){
+            .btn-enviar-contacto{
+              width: 30%;
+              height: 50px;
+              margin-top: 10px;
+            }
+  }

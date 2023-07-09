@@ -1,6 +1,6 @@
 import Header from './Header';
-import Imagen from './Imagen';
 import'../estilos/Contacto.css';
+import Footer from './Footer'
 
 function Contacto(){
     function handleSubmit(e){
@@ -17,16 +17,17 @@ function Contacto(){
     }
     return(
         <>
+       
        <Header/>
-       <Imagen/>
+       
        <h2>Contacto</h2>
        <form onSubmit={handleSubmit} className='contactForm'>
 
          <label className='label-contacto' htmlFor='fullName'>Nombre Completo</label>
-         <input type='text' name='fullName' id='fullName' required/>
+         <input className='input-contacto' type='text' name='fullName' id='fullName' required/>
 
          <label className='label-contacto' htmlFor='email'>Email</label>
-         <input type='email' name='email' id='email' required/>
+         <input className='input-contacto' type='email' name='email' id='email' required/>
 
          <label className='label-contacto' htmlFor='reason'>Razon de Contacto</label>
          <select className='select-contacto' name='reason' id='reason'required>
@@ -39,9 +40,9 @@ function Contacto(){
          <label className='label-contacto' htmlFor='mensaje'>Escriba su Mensaje</label>
          <textarea name='mensaje' id='mensaje' cols='30' rows='10'required></textarea>
 
-         <button type='submit'>Enviar</button>
+         <button className='btn-enviar-contacto' type='submit'>Enviar</button>
         </form>
-        
+        <Footer />
         </>
     )
 }

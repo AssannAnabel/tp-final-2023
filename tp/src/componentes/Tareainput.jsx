@@ -8,7 +8,7 @@ function Tareainput(props){
     const manejarCambio = e =>{//mientras el usuario escribe en tiempo real
         setInput(e.target.value);
         //console.log(e.target.value);/*se va mostrando por consola cada letra que se va escribiendo */
-
+        
     };
     const manejarEnvio = e =>{// evento diferente, envio de formulario.
         e.preventDefault();/*para que no se vuelva a cargar toda la aplicacion cuando se envia el formulario */

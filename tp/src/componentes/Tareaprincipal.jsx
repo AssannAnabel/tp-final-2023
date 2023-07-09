@@ -4,7 +4,7 @@ import Listadetareas from './ListaDeTareas';
 import '../estilos/Tareaprincipal.css'
 
 function Tareaprincipal() {
-  const [titulo, setTitulo] = useState('Titulo que se puede cambiar');
+  const [titulo, setTitulo] = useState('Titulo');
   const [nuevoTitulo, setNuevoTitulo] = useState('');
   const [editandoTitulo, setEditandoTitulo] = useState(false);
 
@@ -27,15 +27,16 @@ function Tareaprincipal() {
     <>
       <div className='tareas-lista-principal'>
         {editandoTitulo ? (
-          <form onSubmit={handleTituloSubmit}>
-            <input type="text" value={nuevoTitulo} onChange={handleTituloChange} />
-            <button type="submit">Cambiar Título</button>
+          <form className='form-titulo' onSubmit={handleTituloSubmit}>
+            <input className='input-titulo-editado' type="text" value={nuevoTitulo} onChange={handleTituloChange} />
+            <button className='btn-cambiar-titulo' type="submit">Cambiar Título</button>
           </form>
         ) : (
           <>
-          
-            <h1>{titulo}</h1>
-            <button id="editarTitulo" onClick={handleEditarTitulo}>Editar Título</button>
+          <div className='div-titulo'>
+            <h1 className='titulo-tarea'>{titulo}</h1>
+            <button className='btn-editar-titulo' id="editarTitulo" onClick={handleEditarTitulo}>Editar Título</button>
+            </div>
           </>
         )}
         <Listadetareas />

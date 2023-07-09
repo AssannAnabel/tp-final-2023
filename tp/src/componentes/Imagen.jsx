@@ -1,4 +1,4 @@
-import imagenLogo from '../imagenes/ImagenLogo.png';
+import imagenLogo from '../imagenes/logov10.png';
 import '../estilos/Imagen.css';
 
 function Imagen(){

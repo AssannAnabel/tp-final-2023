@@ -1,8 +1,80 @@
 .container-p{
     display: flex;
-    justify-content: left;
-    align-items: center;
+     justify-content: left;
+    align-items: center; 
     font-size: xx-large;
     justify-content:space-between ;
     width:12%;
+    
+}
+
+h3{
+    font-size: 30px;
+   color: black;
+   text-align: center;
+   margin: auto;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
+.btn-perfil{
+    margin: auto;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    
+}
+
+.btn-editar{
+    margin: auto;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+
+.usuario{
+    align-items: center;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+
+.btn-guardar{
+    margin: auto;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.btn-editar{
+    margin: auto;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+.tareas{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+   
+}
+.input-edit-usuario{
+    margin-left:10px ;
+}
+
+@media(max-width: 768px){
+    .input-edit-usuario{
+        width: 80px;
+     }
+}
+
+@media(max-width: 576px){
+     .tareas{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: auto;
+     }
 }

@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useRef } from 'react';
+import Footer from './Footer';
 import { UserContext } from './UserContext';
-import Inicio from './Inicio';
 import '../estilos/Login.css';
 import Imagen from './Imagen'
+import { useNavigate } from "react-router-dom";
 
 function Login() {//estados
-  const { user, setUser, isLoggedIn, setIsLoggedIn, loggedInUser, setLoggedInUser } = useContext(UserContext);
-
+  const { user, setUser, isLoggedIn, setIsLoggedIn, loggedInUser, setLoggedInUser, handleLogin } = useContext(UserContext);
+const navigate= useNavigate()
 
   const inicialUrl = 'https://647dd4d6af984710854a6fcc.mockapi.io/user-card';
   const notificacionRef = useRef(null);
@@ -31,12 +32,17 @@ function Login() {//estados
 //lógica validación del usuario
     let userFound = user.find((user) => user.email === loginUser.email);
 
+    
     if (userFound && userFound.password === loginUser.password) {
+      handleLogin(userFound);
+      localStorage.setItem('user', JSON.stringify(userFound)); // Guardar el usuario en localStorage
       setIsLoggedIn(true);
       setLoggedInUser(userFound);
-     
+      navigate('/inicio');
+    }
+    
       
-    } else {
+     else {
       notificacionRef.current.style.color = 'red';
       notificacionRef.current.innerHTML = 'Usuario o contraseña incorrectos';
     }
@@ -46,40 +52,34 @@ function Login() {//estados
 
   function handleSubmitRegis(e) {// componente Registro
     e.preventDefault();
-    window.location = '/registro';
+    navigate("/registro");
+  
     
   }
 
   return (
     <>
     <Imagen/>
-      {!isLoggedIn ? (
-        <>
           <h2>Login</h2>
           <div className='div-form'>
           <form onSubmit={handleSubmit}>
-            <label htmlFor="email">Email: </label>
-            <input type="text" name="email" id="email" placeholder='Ingrese su mail'/>
+            <label className='label-email' htmlFor="email">Email: </label>
+            <input className='input-email' type="text" name="email" id="email" placeholder='Ingrese su Email'/>
 
             <label htmlFor="password">Contraseña: </label>
-            <input type="password" name="password" id="password" placeholder='Ingrese su contraseña'/>
+            <input type="password" name="password" id="password" placeholder='Ingrese su Contraseña'/>
 
             <p id="notificacion" ref={notificacionRef}></p>
             <button type="submit">Iniciar Sesion</button>
           </form>
 
           <form onSubmit={handleSubmitRegis}>
-            <button type="submit">Registrarme</button>
+            <button className='btn-registrarme' type="submit">Registrarme</button>
           </form>
           </div>
+          <Footer/>
         </>
-      ) : (
-        <>
-          <h3>Bienvenido!{loggedInUser.name}</h3>
-         <Inicio /> {/*redirecciona mensaje a la ruta indicada */}
-        </>
-      )}
-    </>
+      
   );
 }
 
