@@ -1,6 +1,7 @@
 import Header from './Header';
 import '../estilos/Nosotros.css';
-import Footer from './Footer'
+import Footer from './Footer';
+import Equipo from '../imagenes/Equipo.png';
 
 
 function Nosotros(){
@@ -14,6 +15,7 @@ function Nosotros(){
         El grupo esta conformado por: Fabricio Cordoba, Santiago Garda y Anabel Assann
          </p>
         </div>
+        <div className='img-nosotros'><img className='img-equipo' src={Equipo} alt="foto Nuestra" /></div>
         <Footer/>   
         </>
     )
