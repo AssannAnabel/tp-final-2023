@@ -77,6 +77,7 @@ const navigate= useNavigate()
             <button className='btn-registrarme' type="submit">Registrarme</button>
           </form>
           </div>
+          
           <Footer/>
         </>
       
