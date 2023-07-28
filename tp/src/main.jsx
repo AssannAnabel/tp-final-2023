@@ -14,3 +14,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </UserProvider>
 </React.StrictMode>
 )
+//userProvide como un proveedro de contexto para envolver la aplicacion, para que los componentes hijos accedan al contexto
+// configura y renderiza el componente principal

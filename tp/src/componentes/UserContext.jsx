@@ -16,8 +16,8 @@ export const UserProvider = ({ children }) => {
     // Almacenar el usuario en localStorage
     //setItem crea o guarda en localstorage el usuario, (nombre de item, data)
     localStorage.setItem('user', JSON.stringify(loggedInUser)); 
-    // console.log("loggedInUser", loggedInUser);
-    // console.log(isLoggedIn);
+     console.log("loggedInUser", loggedInUser);
+    console.log(isLoggedIn);
 
   };
   useEffect(() => {
@@ -28,6 +28,7 @@ export const UserProvider = ({ children }) => {
         setUser(parsedUser);
         setIsLoggedIn(true);
         setLoggedInUser(parsedUser);
+        console.log(parsedUser);
       }
     }
   }, []);
@@ -36,6 +37,7 @@ export const UserProvider = ({ children }) => {
     setUser(null);
     // Eliminar el usuario de localStorage
     localStorage.removeItem('user'); 
+    console.log('usuario cerro sesion');
   };
 
 

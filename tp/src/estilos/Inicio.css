@@ -63,6 +63,12 @@ h3{
 .input-edit-usuario{
     margin-left:10px ;
 }
+.container-usuario{
+    display: flex;
+    border: black solid 1px;
+    background-color: #FCF3CF;
+    width:100%;
+}
 
 @media(max-width: 768px){
     .input-edit-usuario{
